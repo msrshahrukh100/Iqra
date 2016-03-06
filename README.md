@@ -1,2 +1,2 @@
 # Iqra
-A repository for storing my practice programs
+A repository for storing my practice programs in sha Allah
