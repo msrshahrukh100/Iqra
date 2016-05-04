@@ -1,3 +1,7 @@
+// OOPS LAB ASSSIGNMENT 
+// SUBMITTED BY
+// Mohammad Shahrukh    13BCS-0044
+
 #include <iostream>
 using namespace std;
 class C_polygon

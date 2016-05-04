@@ -1,0 +1,40 @@
+/ Q.15 : WRITE A PROGRAM IN C++ TO OVERLOAD CIN AND COUT STREAM OPERATORS TO INPUT AND DISPLAY
+// OBJECTS OF A CLASS STUDENT WHICH CONTAINS STUDENT DETAILS LIKE NAME,CLASS,ROLL_NO ETC.
+
+// #include<iostream>
+// using namespace std;
+// class Shahjahan
+// {
+//     protected:
+// 	char name[50];
+// 	int cls,rollno,age;
+// 	public:
+// 		friend istream & operator >>(istream &din ,Shahjahan &a)
+// 		{
+// 			cout<<"\nEnter Your name :";
+// 			din>>a.name;
+// 			cout<<"\nEnter your class :";
+// 			din>>a.cls;
+// 			cout<<"\nEnter your rollno :";
+// 			din>>a.rollno;
+// 			cout<<"\nEnter your age :";
+// 			din>>a.age;
+// 			return din;
+// 		}
+// 		friend ostream &operator<<(ostream &dout ,Shahjahan &a)
+// 		{
+// 			dout<<"\nYour name :"<<a.name;
+// 			dout<<"\nyour class :"<<a.cls;
+// 			dout<<"\nyour rollno :"<<a.rollno;
+// 			dout<<"\nyour age :"<<a.age;
+// 			return dout;
+// 		}
+// };
+// int main()
+// {
+// 	Shahjahan a;
+// 	cin>>a;
+// 	cout<<a;
+// 	return 0;
+// }
+
