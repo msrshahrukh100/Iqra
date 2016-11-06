@@ -1,36 +1,33 @@
 #include <iostream>
 using namespace std;
+
+int recur_solve(int *a,int n,int no_of_shares,int second)
+{
+	if(n < 0 || (no_of_shares <= 0 && second == 1 ))
+	{
+		if(no_of_shares <= 0)
+			cout<<"sadas the n : "<<n<<endl;
+		return 0;
+		
+	}
+	second = 1;
+	return max((-1*a[n-1])+recur_solve(a,n-1,no_of_shares+1,second) , a[n-1]+recur_solve(a,n,no_of_shares-1,second));
+}
+
 int main()
 {
 	int t;
 	cin>>t;
+
 	while(t--)
 	{
-		int n;cin>>n;
+		int n;
+		cin>>n;
 		int a[n+1];
-
-		for(int i=0; i<n; i++)
+		for(int i=n-1; i>=0; i--)
 			cin>>a[i];
-		int profit = 0;
-		for (int i=0; i<n; i++)
-		{
-			int nextmax = a[i];
-			for(int j=i+1; j<n; j++)
-			{
-				if(nextmax < a[j])
-				{
-					nextmax = a[j];
-					profit += a[j-1];
 
-				}
-				else
-				{
-					profit = a[j-1] * j - profit;
-				}
-			}
-
-		}
-			cout<<profit<<endl;
+		cout<<recur_solve(a,n,0,0)<<endl;
 	}
 	
 	return 0;
